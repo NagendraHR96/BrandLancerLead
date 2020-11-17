@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="5dp"
+    tools:context=".LeadCallFeedBackActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/splashColor"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:drawablePadding="8dp"
+        android:drawableLeft="@drawable/ic_phone_white_24dp"
+        android:id="@+id/number_txt"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:drawableStart="@drawable/ic_phone_white_24dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight=".8"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:id="@+id/duration_txt"
+        android:textColor="@color/white"
+        android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/feedback"
+        android:hint="Feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:minHeight="60dp"
+        android:inputType="text"
+        android:maxLines="3"
+        android:imeOptions="actionDone"
+        android:textColor="@color/blackColor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call Status"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Spinner.DropDown"
+        android:id="@+id/callStatus"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/staus_select"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Spinner.DropDown"
+        android:id="@+id/feedBackStatus"/>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/isfollowvisible"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="#000000"
+            android:text="FollowUp Date"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:id="@+id/followSiteDate"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="#000000"
+            style="@style/Widget.AppCompat.Spinner.DropDown"
+            android:padding="5dp"
+            android:id="@+id/followupdate"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:padding="5dp"
+                android:text="FollowUp Time"
+                android:id="@+id/followSiteTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_weight="1"
+                android:textColor="#000000"
+                style="@style/Widget.AppCompat.Spinner"
+                android:padding="5dp"
+                android:id="@+id/followuptime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancelStatus"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rejection_status"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Spinner.DropDown"
+            android:id="@+id/rejectionSpinner"/>
+
+    </LinearLayout>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wrong Dial"
+        android:id="@+id/wrong_call"/>
+
+  <Button
+      android:background="@color/splashColor"
+      android:id="@+id/save"
+      android:text="Save"
+      android:textColor="@color/white"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/changePassword"
+        android:title="@string/app_Password"
+        android:icon="@drawable/ic_vpn_key_black_24dp"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/siteVisitNav"
+        android:title="@string/lead_Site"
+        android:icon="@drawable/ic_time_to_leave_black_24dp"
+        android:orderInCategory="99"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/followupNav"
+        android:title="@string/lead_follow"
+        android:icon="@drawable/ic_time_to_leave_black_24dp"
+        android:orderInCategory="98"
+        app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,43 @@
+package com.example.brandlancerlead.model;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+
+public class DPPendingListJsonResult implements Serializable {
+    private boolean result;
+    private String resultmessage;
+    private ArrayList<DPPendingListJsonObjects> resultset;
+    private ArrayList<DPPendingListJsonObjects> Furtherresultset;
+
+    public boolean isResult() {
+        return result;
+    }
+
+    public void setResult(boolean result) {
+        this.result = result;
+    }
+
+    public String getResultmessage() {
+        return resultmessage;
+    }
+
+    public void setResultmessage(String resultmessage) {
+        this.resultmessage = resultmessage;
+    }
+
+    public ArrayList<DPPendingListJsonObjects> getResultset() {
+        return resultset;
+    }
+
+    public void setResultset(ArrayList<DPPendingListJsonObjects> resultset) {
+        this.resultset = resultset;
+    }
+
+    public ArrayList<DPPendingListJsonObjects> getFurtherresultset() {
+        return Furtherresultset;
+    }
+
+    public void setFurtherresultset(ArrayList<DPPendingListJsonObjects> furtherresultset) {
+        Furtherresultset = furtherresultset;
+    }
+}

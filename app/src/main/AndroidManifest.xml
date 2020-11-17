@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.brandlancerlead">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        android:required="true" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+
+        <activity android:name=".SiteActivity"/>
+
+
+
+        <activity android:name=".FlowchartActivity"/>
+        <activity android:name=".SiteProgressActivity"/>
+        <activity android:name=".LeadReportActivity" />
+        <activity android:name=".AppointmentActivity" />
+        <activity android:name=".CancelledActivity" />
+        <activity android:name=".CallDetailsActivity" />
+        <activity android:name=".DashBoardActivity" />
+        <activity android:name=".StatusUpdateActivity" />
+        <activity android:name=".DpPendingActivity" />
+        <activity android:name=".ChangePasswordActivity" />
+        <activity android:name=".DpAlertActivity" />
+        <activity android:name=".FollowSiteActivity" />
+        <activity android:name=".LeadCallFeedBackActivity" />
+        <activity android:name=".SubmitActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".LeadSplashActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+
+        <service
+            android:name=".brandUtility.LocationServiceForNougat"
+            android:exported="false" />
+        <service android:name=".brandUtility.AudioRecordService" />
+        <service android:name=".brandUtility.SendDataFromLocalToServer"
+            android:process=":externalProcess"/>
+
+        <receiver
+            android:name=".brandUtility.LocationOreoBroadCast"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.brandlancer.location.action.PROCESS_UPDATES" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource" />
+        </provider>
+    </application>
+
+</manifest>

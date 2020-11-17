@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="2dp"
+    android:layout_height="match_parent"
+    tools:context=".LeadReportActivity">
+
+    <LinearLayout
+        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_marginTop="2dp"
+        android:elevation="5dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="16sp"
+                android:textColor="@color/blackColor"
+                android:text="From "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:gravity="center"
+                android:singleLine="true"
+                style="@style/Widget.AppCompat.Spinner.DropDown"
+                android:text="12/06/2020"
+                android:id="@+id/FromDate"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="16sp"
+                android:textColor="@color/blackColor"
+                android:text="To "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="center"
+                android:singleLine="true"
+                style="@style/Widget.AppCompat.Spinner.DropDown"
+                android:text="12/06/2020"
+                android:id="@+id/ToDate"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_margin="5dp"
+                android:background="@color/gold"
+                android:layout_gravity="end"
+                android:text="Get"
+                android:id="@+id/getReport"
+                android:layout_width="30dp"
+                android:layout_height="30dip" />
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparentBackground">
+        <LinearLayout
+            android:layout_margin="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scroll_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lead Met Details"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@color/white"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+
+                        />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/all_border">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Lead Appointments"
+                            android:paddingTop="5dp"
+                            android:textSize="14sp"
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/blackColor"
+                            android:paddingBottom="5dp"
+                            android:background="@drawable/borderss"
+                            android:paddingRight="10dp" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Leads Met"
+                            android:paddingRight="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Leads Not Met"
+                            android:paddingRight="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+
+                            />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparentBackground"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_led"
+                            android:maxLines="1"
+                            android:textSize="14sp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="end"
+                            android:textColor="@color/blackColor"
+
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+
+
+                            />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/transparentBackground"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="@color/blackColor"
+                            android:paddingTop="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="end"
+                            android:paddingBottom="5dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:id="@+id/total_met"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="@color/blackColor"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="end"                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:id="@+id/total_not_met"
+
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <com.github.mikephil.charting.charts.PieChart
+                    android:layout_width="match_parent"
+                    android:id="@+id/lead_met_chart"
+                    android:layout_height="200dp"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                app:cardElevation="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lead Converted Details"
+                        android:textSize="14sp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@color/white"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold"
+
+                        />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/all_border">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Lead Appointments"
+                            android:paddingTop="5dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/blackColor"
+                            android:paddingBottom="5dp"
+                            android:background="@drawable/borderss"
+
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Leads Open"
+                            android:paddingRight="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Leads Closed"
+                            android:paddingRight="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+                            android:background="@drawable/borderss"
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Leads Converted"
+                            android:paddingRight="30dp"
+                            android:paddingLeft="30dp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="30dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="30dp"
+                            android:paddingBottom="5dp"
+                            android:text="Leads not Converted"
+
+                            />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparentBackground"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_conversion_led"
+                            android:maxLines="1"
+                            android:textSize="14sp"
+                            android:textColor="@color/blackColor"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:gravity="end"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            />
+                        <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/transparentBackground"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="@color/blackColor"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="end"                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:id="@+id/total_conversion_open"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="end"
+                            android:maxLines="1"
+                            android:textColor="@color/blackColor"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:id="@+id/total_conversion_close"
+                            />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/transparentBackground"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="@color/blackColor"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:gravity="end"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:id="@+id/total_conversion_done"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="@color/blackColor"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:gravity="end"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:layout_gravity="center_horizontal"
+                            android:id="@+id/total_conversion_not_done"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/conversion_chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+
+        </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginBottom="5dp"
+                app:cardElevation="5dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Site Visit Details"
+        android:textSize="14sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimary"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+
+        />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/all_border">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total Site Visit Confirmed"
+                            android:paddingTop="5dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+
+                            android:textSize="14sp"
+                            android:textColor="@color/blackColor"
+                            android:paddingBottom="5dp"
+                            android:background="@drawable/borderss"
+
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="SiteVisit Done"
+                            android:paddingRight="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+
+                            />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="SiteVisit Pending"
+                            android:paddingRight="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="5dp"
+
+                            />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparentBackground"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/total_sitevisit"
+                            android:maxLines="1"
+                            android:textSize="14sp"
+                            android:textColor="@color/blackColor"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="end"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+
+
+                            />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/transparentBackground"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="end"                            android:maxLines="1"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="5dp"
+                            android:id="@+id/total_sitevisit_done"
+                            android:textColor="@color/blackColor" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="@color/blackColor"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="end"                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:id="@+id/total_sitevisit_pending"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+            <com.github.mikephil.charting.charts.PieChart
+                android:layout_width="match_parent"
+                android:id="@+id/sitvisit_chart"
+                android:layout_height="200dp"/>
+
+        </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+</ScrollView>
+
+</LinearLayout>
+</LinearLayout>

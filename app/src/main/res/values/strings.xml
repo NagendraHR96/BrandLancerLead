@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Sancity Lead Management</string>
+    <string name="app_logo">brandLogoforApp</string>
+    <string name="app_info">Lead Management \n System </string>
+    <string name="gps_title">Enable GPS Provider</string>
+    <string name="gps_message">You should turn on GPS and set location mode to HIGH_ACCURACY </string>
+    <string name="positive_ok">OK</string>
+    <string name="app_Login">Login</string>
+    <string name="user_name">User Details</string>
+    <string name="user_name_Hint">Enter User Id</string>
+    <string name="password_hint">Enter Password</string>
+    <string name="callLog">Call</string>
+    <string name="lead_fresh">Fresh</string>
+    <string name="lead_run">Running</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_Password">Change Password</string>
+    <string name="app_logOut">Logout</string>
+    <string name="lead_image">Self With Customer</string>
+    <string name="followup">Is FollowUp</string>
+    <string name="leaf_Feedback">FeedBack :</string>
+    <string name="leaf_Feedbackhint">Enter FeedBack</string>
+    <string name="leaf_rejecthint">Enter Reason For Rejection</string>
+    <string name="let_met">Met</string>
+    <string name="let_Notmet">Not Met</string>
+    <string name="met_state">Met Status :</string>
+    <string name="isFollowUp">Is Followup</string>
+    <string name="isSiteVisit">Is Site Visit</string>
+    <string name="submit_lead">Submit</string>
+    <string name="lead_Finish">Finished</string>
+    <string name="lead_Site">SiteVisit</string>
+    <string name="staus_select">Status :</string>
+    <string name="rejection_status">Rejection Reason :</string>
+    <string name="lead_follow">Followup\'s</string>
+    <string name="today_follow">Today\'s Followup\'s</string>
+    <string name="feature_follow">Future Followup\'s</string>
+
+    <string name="today_site">Today\'s Site visit\'s</string>
+
+    <string name="feature_site">Future Site visit\'s</string>
+    <string name="previous_site">Previous Site visit\'s</string>
+
+    <string name="previous_followups">Previous  Followup\'s</string>
+</resources>

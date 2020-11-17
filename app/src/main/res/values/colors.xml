@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EBBC46</color>
+    <color name="colorPrimaryDark">#C59009</color>
+    <color name="colorAccent">#D8B91B</color>
+    <color name="transparentBackground">#68757575</color>
+    <color name="blackColor">#000000</color>
+    <color name="splashColor"> #DAA520</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gold">#ffd105</color>
+    <color name="redColor">#FF5252</color>
+    <color name="checkedColour">#00ACC1</color>
+    <color name="back">#99EBBC46</color>
+    <color name="boooked">#41B84B</color>
+    <color name="tempblocked">#00D7DD</color>
+    <color name="companyblocked">#D49B44</color>
+    <color name="green">#000</color>
+
+</resources>

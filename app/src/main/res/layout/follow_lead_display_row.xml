@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="5dp"
+    android:id="@+id/fleadView"
+    android:layout_margin="2dp"
+    app:cardCornerRadius="2dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:padding="5dp"
+           android:orientation="vertical">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/fcust_name"
+               android:drawableStart="@drawable/ic_person_24dp"
+               android:drawableLeft="@drawable/ic_person_24dp"
+               android:drawablePadding="5dp"
+               android:maxLines="1"
+               android:ellipsize="end"
+               android:gravity="center_vertical"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/fcust_phone"
+               android:drawableStart="@drawable/ic_phone_24dp"
+               android:drawableLeft="@drawable/ic_phone_24dp"
+               android:drawablePadding="5dp"
+               android:maxLines="1"
+               android:layout_marginTop="5dp"
+               android:gravity="center_vertical"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/fcust_place"
+               android:drawableStart="@drawable/ic_place_24dp"
+               android:drawableLeft="@drawable/ic_person_24dp"
+               android:drawablePadding="5dp"
+               android:maxLines="1"
+               android:layout_marginTop="5dp"
+               android:ellipsize="end"
+               android:gravity="center_vertical"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:maxLines="1"
+               android:id="@+id/siteVisitDone"
+               android:gravity="center"/>
+
+       </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:padding="5dp"
+               android:orientation="vertical">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/flead_tele"
+                   android:drawableStart="@drawable/ic_headset_24dp"
+                   android:drawableLeft="@drawable/ic_headset_24dp"
+                   android:drawablePadding="5dp"
+                   android:maxLines="1"
+                   android:ellipsize="end"
+                   android:gravity="center_vertical"/>
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/flead_Date"
+                   android:drawableStart="@drawable/ic_date_range_black_24dp"
+                   android:drawableLeft="@drawable/ic_date_range_black_24dp"
+                   android:drawablePadding="5dp"
+                   android:layout_marginTop="5dp"
+                   android:maxLines="1"
+                   android:gravity="center_vertical"/>
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/flead_time"
+                   android:drawableStart="@drawable/ic_time_24dp"
+                   android:drawableLeft="@drawable/ic_time_24dp"
+                   android:drawablePadding="5dp"
+                   android:layout_marginTop="5dp"
+                   android:maxLines="1"
+                   android:gravity="center_vertical"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:maxLines="1"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/ffeedBackHint"
+                   android:gravity="center"/>
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="end"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/viewLog"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:text="View Log"
+                android:textAllCaps="false"
+                android:textColor="@color/blackColor" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/fcallerButton"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@color/white"
+                android:drawableStart="@drawable/ic_phone_24dp"
+                android:drawableLeft="@drawable/ic_phone_24dp"
+                android:text="@string/callLog"
+                android:textAllCaps="false"
+                android:textColor="@color/blackColor"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

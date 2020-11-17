@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="56dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/locUXView"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/right_top_corner"
+        android:text="X"
+        android:id="@+id/close_dailog"
+        android:textSize="28sp"
+
+        android:textColor="#858383"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:textSize="18sp"
+            android:text="Payment History"
+            android:paddingLeft="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center_vertical"
+            android:paddingRight="20dp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/paymentListHolder"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
